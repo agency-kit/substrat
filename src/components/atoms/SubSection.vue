@@ -1,7 +1,7 @@
 <script>
 export default defineComponent({
   setup(props, {slots}) {
-    return () => h('section', null, [h(slots.default)])
+    return () => h('section', {class: 'sub-section'}, [h(slots.default)])
   }
 })
 </script>
@@ -15,11 +15,12 @@ export default defineComponent({
 <style scoped>
 section {
   min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    --flow-space: var(--space-s);
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  --flow-space: var(--space-s);
+  margin: auto;
+  padding: var(--space-s);
 }
 </style>

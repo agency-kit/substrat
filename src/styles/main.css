@@ -1,32 +1,10 @@
+@layer base, composition, utilities, block, substrat-theme, exception;
+
 @import 'global/reset.css';
 @import 'global/fonts.css';
-
 @import 'global/variables.css';
 @import 'global/global.css';
 
 @import 'utilities/flow.css';
 @import 'utilities/region.css';
 @import 'utilities/wrapper.css';
-
-/* @import './markdown.css'; */
-
-@layer base;
-@layer components;
-@layer theme;
-
-/* :root {
-@apply UnoRoot;
-} */
-
-html,
-body,
-#app {
-  height: 100%;
-  margin: 0;
-  padding: 0 0.25rem;
-}
-
-html.dark {
-  background: var(--color-dark);
-  color: var(--color-light);
-}

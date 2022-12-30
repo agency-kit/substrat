@@ -28,8 +28,6 @@ export default defineComponent({
     minmax(var(--grid-min-item-size, 16rem), 1fr)
   );
   gap: var(--gutter, var(--space-s-l));
-  /* only for custom grid */
-  max-width: 75vw;
 }
 
 .grid[data-rows='masonry'] {
@@ -39,10 +37,6 @@ export default defineComponent({
 
 .grid[data-layout='50-50'] {
   --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
-}
-
-.grid .grid-item h2 {
-  font-size: var(--size-step-2);
+  --grid-min-item-size: clamp(4rem,50vw,10rem);
 }
 </style>

@@ -1,11 +1,44 @@
-/* Global variables */
-:root {
-    --gutter: var(--space-s-m);
-    --border-radius: var(--size-step-1);
-    --transition-base: 250ms ease;
-    --transition-movement: 200ms linear;
-    --transition-fade: 200ms ease;
-    --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-    --tracking: -0.05ch;
-    --tracking-s: -0.075ch;
+@layer base {
+ /* Global variables */
+    :root {
+        --gutter: var(--space-s-m);
+        --border-radius: var(--size-step-1);
+        --transition-base: 250ms ease;
+        --transition-movement: 200ms linear;
+        --transition-fade: 200ms ease;
+        --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+        --tracking: -0.05ch;
+        --tracking-s: -0.075ch;
+        --color-inherit: inherit;
+        --color-current: currentColor;
+        --color-light: white;
+        --color-dark: darkgrey;
+        --color-light-glare: #FFFFFF;
+        --color-primary: #0042BF;
+        --color-primary-glare: #D8E2F4;
+        --color-secondary: #EE5141;
+        --color-secondary-glare: #FFE3E5;
+        --color-secondary-dark: #242424;
+        --space-s: clamp(1rem, 0.97rem + 0.10vw, 1.25rem);
+        --space-m: clamp(1.5rem, 1.45rem + 0.15vw, 1.875rem);
+        --space-l: clamp(2rem, 1.94rem + 0.20vw, 2.5rem);
+        --space-xs-s: clamp(0.75rem, 0.69rem + 0.20vw, 1.25rem);
+        --space-s-m: clamp(1rem, 0.89rem + 0.35vw, 1.875rem);
+        --space-m-l: clamp(1.5rem, 1.38rem + 0.40vw, 2.5rem);
+        --space-l-xl: clamp(2rem, 1.78rem + 0.70vw, 3.75rem);
+        --space-l-2xl: clamp(2rem, 1.63rem + 1.20vw, 5rem);
+        --space-xl-2xl: clamp(3rem, 2.75rem + 0.80vw, 5rem);
+        --space-2xl-3xl: clamp(4rem, 3.56rem + 1.40vw, 7.5rem);
+        --size-step-0: clamp(1rem, 0.97rem + 0.10vw, 1.25rem);
+        --size-step-1: clamp(1.1875rem, 1.12rem + 0.22vw, 1.75rem);
+        --size-step-2: clamp(1.4375rem, 1.30rem + 0.43vw, 2.5rem);
+        --size-step-3: clamp(1.75rem, 1.52rem + 0.73vw, 3.5625rem);
+        --size-step-4: clamp(2.0625rem, 1.70rem + 1.18vw, 5rem);
+        --size-step-5: clamp(2.5rem, 1.93rem + 1.82vw, 7.0625rem);
+        --size-step-6: clamp(3rem, 2.13rem + 2.77vw, 9.9375rem);
+        --font-sans: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        --font-serif: Georgia,sans-serif;
+        --font-mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        --font-base: Inter,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    }
 }

@@ -13,9 +13,11 @@
     "vite-plugin-inspect": "^0.7.11",
     "vite-plugin-pages": "^0.28.0",
     "vite-plugin-vue-layouts": "^0.7.0",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@iconify-json/carbon": "^1.1.11",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
@@ -24,6 +26,7 @@
     "postcss-import": "^15.1.0",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-nesting": "^10.2.0",
+    "slugify": "^1.6.5",
     "unocss": "^0.48.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",

@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import Pages from 'vite-plugin-pages'
 import viteInspect from 'vite-plugin-inspect'
 import buildStyle from './build/build-style'
 
@@ -22,16 +23,21 @@ export default defineConfig({
       ],
       dirs: [
         './src/components/atoms/*',
-        './src/components/molecules/*'
+        './src/components/molecules/*',
+        './src/layouts/*'
       ],
       dts: 'src/auto-imports.d.ts',
     }),
     Components({
+      dirs: ['src/components/', 'src/layouts/'],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
+    }),
+    Pages({
+      extensions: ['vue'],
     }),
     buildStyle()
   ],

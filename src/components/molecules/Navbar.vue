@@ -1,20 +1,42 @@
 <script setup>
-
+const props = defineProps({
+  sticky: Boolean
+})
 </script>
 
 <template>
-  <nav>
+  <nav :class="{sticky: props.sticky}">
     <DoubleCluster>
       <template #default>
         <slot name="title"/>
       </template>
       <template #innerContent>
-        <slot name="links"/>
+        <div class="links">
+          <slot name="links"/>
+        </div>
       </template>
     </DoubleCluster>
   </nav>
 </template>
 
 <style scoped>
+.links:deep(> *) {
+  margin-left: 1rem;
+  display: inline-block;
+}
 
+nav {
+  background-color: var(--color-primary);
+  z-index: 1;
+  padding: var(--space-xs);
+}
+
+.dark nav {
+  background-color: var(--color-dark);
+}
+
+nav.sticky {
+  position: sticky;
+  top: 0;
+}
 </style>

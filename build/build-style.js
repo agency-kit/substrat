@@ -9,7 +9,8 @@ export default function () {
         await $`postcss ./src/styles/main.css --config ./src/styles/postcss.config.js -o ./dist/main.css`
         await $`unocss ./src/**/*.vue --out-file ./dist/uno.css`
         await $`cat ./dist/main.css ./dist/uno.css ./dist/temp-components.css > ./dist/temp-substrat.css`
-        await $`postcss ./dist/temp-substrat.css --config ./postcss.config.js -o ./dist/substrat.css`
+        await $`postcss ./dist/temp-substrat.css --config ./src/postcss.config.js -o ./dist/substrat.css`
+        await $`cp -r ./src/styles/themes ./dist/themes`
         await $`rm ./dist/temp-components.css && rm ./dist/uno.css && rm ./dist/main.css && rm ./dist/temp-substrat.css`
         console.log('build styles plugin complete.')
       }

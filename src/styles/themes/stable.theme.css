@@ -1,0 +1,12 @@
+@layer substrat-theme {
+  :root {
+    --color-inherit: inherit;
+    --color-current: currentColor;
+    --color-light: #f2f2f2;
+    --color-dark: #363636;
+    --color-primary: #00f1ff;
+    --color-secondary: #d1d1d1;
+    --color-secondary-dark: #242424;
+    transition: background-color 1s ease-in-out, color 0.3s ease-in-out;
+  }
+}
