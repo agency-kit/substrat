@@ -1,12 +1,12 @@
 <script setup>
-const props = defineProps({switch: Boolean})
+const props = defineProps({switch: Boolean, ratio: Number})
 </script>
 
 
 <template>
   <SideCar basis :class="{ switch: props.switch}">
     <template #left>
-      <Frame numerator="16" denominator="9">
+      <Frame numerator="16" denominator="9" :ratio="ratio">
         <slot name="img"/>
       </Frame>
     </template>

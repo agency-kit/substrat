@@ -1,4 +1,4 @@
-@layer base, composition, utilities, block, substrat-theme, exception;
+@layer base, utilities, block, composition, substrat-theme, exception;
 
 @import 'global/reset.css';
 @import 'global/fonts.css';

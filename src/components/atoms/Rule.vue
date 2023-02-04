@@ -16,7 +16,7 @@ hr {
     width: 90%;
     border: none;
     border-top: v-bind("double");
-    color: var(--color-inherit);
+    color: inherit;
     overflow: visible;
     text-align: center;
     height: 5px;

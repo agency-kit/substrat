@@ -1,7 +1,12 @@
 <script>
 export default defineComponent({
+  props: {
+    text: Boolean
+  },
   setup(props, {slots}) {
-    return () => h('section', {class: 'sub-section'}, [h(slots.default)])
+    return () => h('section', {class: [
+      'sub-section', 
+      props.text ? 'text': '']}, [h(slots.default)])
   }
 })
 </script>
@@ -22,5 +27,10 @@ section {
   --flow-space: var(--space-s);
   margin: auto;
   padding: var(--space-s);
+}
+
+section.text {
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 </style>

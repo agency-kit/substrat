@@ -3,7 +3,6 @@ const nav = $ref(null)
 const bar = $ref(null)
 const navHeight = $ref('')
 onMounted(()=>{
-  console.log(bar.$el)
   navHeight = nav.$el.clientHeight + 'px'
 })
 </script>
@@ -55,7 +54,7 @@ onMounted(()=>{
 
 .chalcedony:deep(.bar) {
   position: relative;
-  padding: var(--space-xs);
+  padding: var(--space-s);
   height: 100vh;
   background: var(--color-secondary);
   transition: min-width 0.5s ease-in-out;
@@ -76,5 +75,4 @@ onMounted(()=>{
 .chalcedony .scroller {
   padding-bottom: v-bind("navHeight");
 }
-
 </style>

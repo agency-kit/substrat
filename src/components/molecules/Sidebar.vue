@@ -14,7 +14,8 @@ export default defineComponent({
 
 <script setup>
 const props = defineProps({
-  sticky: Boolean
+  sticky: Boolean,
+  full: Boolean
 })
 
 const bar = $ref(null)
@@ -27,7 +28,6 @@ const toggle = () => {
     width = bar.clientWidth
     bar.style.minWidth = `${offset}px`
   } else {
-    console.log(width)
     bar.style.minWidth = `${width}px`
     bar.style.position = 'relative'
     setTimeout(()=>open = !open, 300)
@@ -37,8 +37,8 @@ const toggle = () => {
 
 
 <template>
-  <div class="sidebar" :class="{sticky: props.sticky}">
-    <div class="bar" ref="bar" :class="{hide: !open}">
+  <div class="sidebar" :class="{full: props.full}">
+    <div class="bar" ref="bar" :class="{hide: !open, sticky: props.sticky}">
       <slot name="bar" :toggle="toggle" :open="open"/>
     </div>
     <div class="content">
@@ -48,37 +48,44 @@ const toggle = () => {
 </template>
 
 <style scoped>
-.sidebar {
-  display: flex;
-  flex-shrink: 0;
-  flex-wrap: nowrap;
-  gap: var(--space-s);
-}
+@layer block {
+  .sidebar {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    gap: var(--space-s);
+  }
 
-.sidebar:deep(> :first-child) {
-  flex-grow: 1;
-  flex-basis: unset;
-}
+  .sidebar:deep(> :first-child) {
+    flex-grow: 1;
+    flex-basis: unset;
+  }
 
-.sidebar:deep(> :last-child) {
-  flex-basis: 0;
-  flex-grow: 999;
-}
+  .sidebar:deep(> :last-child) {
+    flex-basis: 0;
+    flex-grow: 999;
+  }
 
-.sidebar.sticky {
-  max-height: 100vh;
-}
+  .sidebar.full {
+    max-height: 100vh;
+  }
 
-.bar {
-  align-self: flex-start;
-  min-width: 6rem;
-}
+  .sticky.bar {
+    position: sticky;
+    top: 0;
+  }
 
-.bar.hide:deep(> *:not(.toggle-tab)) {
-  display: none;
-}
+  .bar {
+    align-self: flex-start;
+    min-width: 6rem;
+  }
 
-.content {
-  overflow-y: auto;
+  .bar.hide:deep(> *:not(.toggle-tab)) {
+    display: none;
+  }
+
+  .content {
+    overflow-y: auto;
+  }
 }
 </style>

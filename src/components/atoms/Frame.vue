@@ -1,19 +1,9 @@
 <script setup>
 const props = defineProps(['numerator','denominator', 'ratio'])
-
-const aspect = props.ratio ? props.ratio : 'var(--n) / var(--d)';
+const aspect = ref(null)
+aspect.value = props.ratio ? props.ratio : 'var(--n) / var(--d)';
+console.log(aspect.value, 'ASPECT')
 </script>
-
-<!-- <script>
-export default defineComponent({
-  setup(props, {slots}) {
-    const num = props.numerator
-    const denom = props.denominator
-
-    return () => h()
-  }
-})
-</script> -->
 
 <template>
   <div class="frame">
@@ -23,8 +13,8 @@ export default defineComponent({
 
 <style scoped>
 .frame {
-  --n: v-bind(numerator);
-  --d: v-bind(denominator);
+  --n: v-bind("props.numerator");
+  --d: v-bind("props.denominator");
   aspect-ratio: v-bind("aspect");
   overflow: hidden;
   display: flex;

@@ -1,2 +1,2 @@
-export const modules = import.meta.glob('./components/**/*.vue', { eager: true })
-export const layouts = import.meta.glob('./layouts/**/*.vue', { eager: true })
+export * from './exports.js'
+export {default as SubstratResolver} from './resolver.js'

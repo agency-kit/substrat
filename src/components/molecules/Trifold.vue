@@ -27,7 +27,7 @@
   flex-grow: 3;
   flex-shrink: 0;
   flex-basis: unset;
-  padding: var(--space-xs);
+  padding: var(--space-s);
 }
 
 .trifold:deep(> .content) {
@@ -39,6 +39,6 @@
   flex-grow: 3;
   flex-shrink: 1;
   flex-basis: unset;
-  padding: var(--space-xs);
+  padding: var(--space-s);
 }
 </style>

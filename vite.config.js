@@ -20,6 +20,10 @@ export default defineConfig({
       ],
       imports: [
         'vue',
+        {'lodash' : [
+          'debounce',
+          'throttle'
+        ]}
       ],
       dirs: [
         './src/components/atoms/*',

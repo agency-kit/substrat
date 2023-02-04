@@ -24,7 +24,7 @@
 
 <style scoped>
 .footer-cluster {
-  padding: var(--space-xs);
+  padding: var(--space-s);
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: row;

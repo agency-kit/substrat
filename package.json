@@ -1,26 +1,30 @@
 {
   "name": "substrat",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
+  "main": "dist/substrat.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node ./build/components.js && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@unocss/cli": "^0.48.0",
-    "vite-plugin-inspect": "^0.7.11",
-    "vite-plugin-pages": "^0.28.0",
-    "vite-plugin-vue-layouts": "^0.7.0",
+    "lodash": "^4.17.21",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.11",
+    "@unocss/cli": "^0.48.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
+    "glob": "^8.0.3",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
@@ -31,7 +35,10 @@
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
+    "vite-plugin-inspect": "^0.7.11",
     "vite-plugin-libcss": "^1.0.5",
+    "vite-plugin-pages": "^0.28.0",
+    "vite-plugin-vue-layouts": "^0.7.0",
     "zx": "^7.1.1"
   }
 }

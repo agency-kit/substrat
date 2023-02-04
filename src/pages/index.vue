@@ -8,8 +8,9 @@
       <template #links>
         <a href="/">Link A</a>
         <RouterLink to="/b">Link B</RouterLink>
-        <a href="/">Link C</a>
-        <a href="/">Link D</a>
+        <RouterLink to="/c">Link C</RouterLink>
+        <RouterLink to="/d">Link D</RouterLink>
+        <RouterLink to="/sunstone-ex">Sunstone</RouterLink>
         <DarkModeButton>
           <div class="i-carbon-sun dark:i-carbon-moon"></div>
         </DarkModeButton>
@@ -174,7 +175,7 @@
       </Block>
     </SubSection>
     <SubSection>
-      <Sidebar class="bar-example">
+      <Sidebar class="bar-example" sticky>
         <template #bar>
           <h3>sub sub</h3>
           <ul class="p-1">
@@ -260,6 +261,14 @@
           </ul>
         </template>
       </TriFold>
+    </SubSection>
+    <SubSection>
+      <div>Stagger</div>
+      <Stagger maxWidth="500">
+        <div>This.</div>
+        <h1>Isn't What.</h1>
+        <div>You Think It Is.</div>
+      </Stagger>
     </SubSection>
     <Footer>
     <template #left>

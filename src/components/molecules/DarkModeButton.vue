@@ -6,12 +6,14 @@ export default defineComponent({
     return () => h('button', {
       class: 'sub-button',
       onClick(event) {
-        const html = document.documentElement
-        if (html.classList.contains('dark')) {
-          html.classList.remove('dark')
-        } 
-        else {
-          html.classList.add('dark')
+        if (document) {
+          const html = document.documentElement
+          if (html.classList.contains('dark')) {
+            html.classList.remove('dark')
+          } 
+          else {
+            html.classList.add('dark')
+          }
         }
     }
     }, [h(slots.default)])

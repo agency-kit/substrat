@@ -22,13 +22,13 @@ const props = defineProps({
 <style scoped>
 .links:deep(> *) {
   margin-left: 1rem;
-  display: inline-block;
+  display: inline-flex;
 }
 
 nav {
   background-color: var(--color-primary);
   z-index: 1;
-  padding: var(--space-xs);
+  padding: var(--space-s);
 }
 
 .dark nav {

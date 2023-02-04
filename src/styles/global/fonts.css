@@ -1,5 +1,5 @@
 @layer base {
-  @font-face {
+  /* @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -25,5 +25,5 @@
     font-style: normal;
     font-weight: 900;
     src: url('/fonts/inter-v8-latin-900.woff2') format('woff2');
-  }
+  } */
 }

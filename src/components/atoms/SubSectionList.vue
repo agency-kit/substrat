@@ -6,8 +6,12 @@ const SectionItems = defineComponent({
     if (!slots.default) {
       return undefined;
     }
+    let slot = slots.default()[0]
+    if (slot.key === '_sections') {
+      slot = slot.children[0]
+    }
     let counter = 0;
-    return () => slots.default()[0].children.map(vnode => {
+    return () => slot.children.map(vnode => {
       const render = h(SubSection, {id: `subsec-${counter}`}, {default: () => vnode})
       counter++;
       return render
