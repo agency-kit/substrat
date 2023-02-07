@@ -5,7 +5,7 @@
 <template>
     <label>
         <slot/>
-        <input type="text" :name="name"/>
+        <input type="file" :name="name"/>
     </label>
 </template>
 

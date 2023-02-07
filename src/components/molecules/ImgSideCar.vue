@@ -1,12 +1,12 @@
 <script setup>
-const props = defineProps({switch: Boolean, ratio: Number})
+const props = defineProps({basis: {Number}, minSize: {Number}, switch: Boolean, ratio: Number, filter: Boolean})
 </script>
 
 
 <template>
-  <SideCar basis :class="{ switch: props.switch}">
+  <SideCar :basis="basis" :minSize="minSize" :class="{ switch: props.switch}">
     <template #left>
-      <Frame numerator="16" denominator="9" :ratio="ratio">
+      <Frame numerator="9" denominator="16" :ratio="ratio" :filter="filter">
         <slot name="img"/>
       </Frame>
     </template>

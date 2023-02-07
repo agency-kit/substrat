@@ -1,31 +1,24 @@
-<script>
-// Should inherit SubButton
-
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('button', {
-      class: 'sub-button',
-      onClick(event) {
-        if (document) {
-          const html = document.documentElement
-          if (html.classList.contains('dark')) {
-            html.classList.remove('dark')
-          } 
-          else {
-            html.classList.add('dark')
-          }
-        }
+<script setup>
+const handleDark = ()=>{
+  if (document) {
+    const html = document.documentElement
+    if (html.classList.contains('dark')) {
+      localStorage.setItem('dark', 'false');
+      html.classList.remove('dark')
+    } 
+    else {
+      localStorage.setItem('dark', 'true');
+      html.classList.add('dark')
     }
-    }, [h(slots.default)])
   }
-})
+}
 </script>
 
-<!-- <template>
-  <button class="sub-button dark-toggle">
+<template>
+  <button class="sub-button dark-toggle" @click="handleDark">
     <slot/>
   </button>
-</template> -->
+</template>
 
 <style scoped>
 @layer block {

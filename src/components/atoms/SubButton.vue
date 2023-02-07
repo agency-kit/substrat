@@ -1,20 +1,12 @@
-<script>
-import { defineComponent, h } from 'vue';
-
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('button', {
-      class: 'sub-button',
-    }, [h(slots.default)])
-  }
-})
+<script setup>
+const props = defineProps({secondary: Boolean})
 </script>
 
-<!-- <template>
-  <button class="sub-button">
+<template>
+  <button class="sub-button" :class="{secondary}">
     <slot/>
   </button>
-</template> -->
+</template>
 
 <style scoped>
 @layer block {

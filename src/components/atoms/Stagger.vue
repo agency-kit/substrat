@@ -9,6 +9,8 @@ const StaggerItems = defineComponent({
     return slots.default().map(vnode => h('div', {class: 'stag'}, [vnode]))
   }
 })
+
+
 </script>
 
 <template>

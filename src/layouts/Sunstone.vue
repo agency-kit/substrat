@@ -40,33 +40,35 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.sticky.hero {
-  z-index: -1;
-  top: 0;
-  height: calc(100vh - v-bind("navHeight"));
-}
+@layer composition {
+  .sticky.hero {
+    z-index: -1;
+    top: 0;
+    height: calc(100vh - v-bind("navHeight"));
+  }
 
-.sticky.nav {
-  top: 0;
-  z-index: 10;
-  background-color: var(--color-light);
-}
+  .sticky.nav {
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-light);
+  }
 
-.sheet {
-  background-color: var(--color-light);
-}
+  .sheet {
+    background-color: var(--color-light);
+  }
 
-.content {
-  margin: 0 auto;
-  max-width: 90vw;
-}
+  .content {
+    margin: 0 auto;
+    max-width: 90vw;
+  }
 
-.detector {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  height: 1px;
-  width: 1px;
-  background: transparent;
+  .detector {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    background: transparent;
+  }
 }
 </style>

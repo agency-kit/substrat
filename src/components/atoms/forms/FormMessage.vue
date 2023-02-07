@@ -11,13 +11,16 @@
 
 
 <style>
-label {
-    display: flex;
-    flex-direction: column;
-}
-textarea {
-    resize: vertical;
-    min-height: 3rem;
-    max-height: 50vh;
+@layer block {
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+    textarea {
+        resize: vertical;
+        min-height: 3rem;
+        max-height: 50vh;
+        margin-left: 0;
+    }
 }
 </style>

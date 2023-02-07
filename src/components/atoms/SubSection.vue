@@ -1,21 +1,13 @@
-<script>
-export default defineComponent({
-  props: {
-    text: Boolean
-  },
-  setup(props, {slots}) {
-    return () => h('section', {class: [
-      'sub-section', 
-      props.text ? 'text': '']}, [h(slots.default)])
-  }
-})
+<script setup>
+
+const props = defineProps({text: Boolean})
 </script>
 
-<!-- <template>
-  <section>
+<template>
+  <section class="sub-section" :class="{text}">
     <slot/>
   </section>
-</template> -->
+</template>
 
 <style scoped>
 section {

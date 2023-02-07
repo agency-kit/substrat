@@ -124,6 +124,10 @@
     max-width: 50ch;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   /* Base selection styles that invert whatever colours are rendered */
   ::selection {
     background: var(--color-dark);

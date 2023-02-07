@@ -1,33 +1,24 @@
-<script>
-export default defineComponent({
-  props: {
-    basis: Boolean
-  },
-  setup(props, {slots}) {
-    return () => h('div', {class: 'sidecar'}, [
-     h('div', {class: (props.basis ? 'basis' : '')}, h(slots.left)),
-     h('div', null, h(slots.right))
-    ])
-  }
-})
+<script setup>
+const props = defineProps({basis: {type: Number, default: 0}, minSize: {type: Number, default: 50}}) // in em
 </script>
 
-<!-- <template>
+<template>
   <div class="sidecar">
-    <div>
-      <slot/>
+    <div :class="{basis: props.basis}">
+      <slot name="left"/>
     </div>
     <div>
-      <slot/>
+      <slot name="right"/>
     </div>
   </div>
-</template> -->
+</template>
 
 <style scoped>
 .sidecar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-s);
+  align-items: center;
 }
 
 .sidecar:deep(> :first-child) {
@@ -35,13 +26,13 @@ export default defineComponent({
   flex-basis: unset;
 }
 
-.sidecar:deep(> .basis) {
-  flex-basis: 48%;
+.sidecar .basis {
+  flex-basis: v-bind(basis +'em');
 }
 
 .sidecar:deep(> :last-child) {
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: calc(50vw - var(--space-m));
+  min-inline-size: calc(v-bind(minSize+'vw') - var(--space-m));
 }
 </style>

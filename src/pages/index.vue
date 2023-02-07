@@ -83,7 +83,7 @@
           </Reel>
         </div>
         <div>
-          <SideCar>
+          <SideCar :basis="24" :minSize="50">
             <template #left>
               <Center class="flow">
                 <h3>Left Side</h3>
@@ -261,6 +261,20 @@
           </ul>
         </template>
       </TriFold>
+    </SubSection>
+    <SubSection fit>
+      <List>
+        <div class="flex flex-row">
+          <div class="i-carbon-analytics"></div>
+          Hi jose
+        </div>
+        <div>
+          my
+        </div>
+        <div>
+          Name is
+        </div>
+      </List>
     </SubSection>
     <SubSection>
       <div>Stagger</div>

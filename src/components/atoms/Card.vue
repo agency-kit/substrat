@@ -27,5 +27,10 @@
     color: var(--color-dark);
     background: var(--color-secondary);
   }
+
+.dark .card {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
 }
 </style>
