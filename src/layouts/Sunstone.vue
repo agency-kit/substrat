@@ -12,9 +12,14 @@ onMounted(() => {
   }, 50)
   addEventListener("resize", updateNavHeight);
 
-  const observer = new IntersectionObserver(([e]) => {
-      showHero.value = e.intersectionRatio < 1 ? false : true;
-    }, { threshold: [1] });
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.boundingClientRect.top < 0 && !entry.isIntersecting) {
+        // entered viewport at the top edge, hence scroll direction is up
+        showHero.value =  false;
+    } else {
+      showHero.value =  true;
+    }
+  }, {threshold: [1]})
   observer.observe(detector.value);
 })
 </script>
@@ -22,7 +27,9 @@ onMounted(() => {
 <template>
   <div class="jasper">
     <div class="sticky hero" ref="hero" v-if="shouldShowHero">
-      <slot name="hero" v-if="showHero"/>
+      <Transition name="fade">
+        <slot name="hero" v-if="showHero"/>
+      </Transition>
     </div>
     <div class="sticky nav" ref="nav">
       <div ref="detector" class="detector"></div>
@@ -65,10 +72,21 @@ onMounted(() => {
   .detector {
     position: absolute;
     top: -1px;
-    left: 0;
+    left: 0px;
     height: 1px;
     width: 1px;
     background: transparent;
   }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity var(--transition-duration) var(--transition-easing);
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
 }
 </style>

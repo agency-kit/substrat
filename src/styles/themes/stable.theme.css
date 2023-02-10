@@ -2,8 +2,8 @@
   :root {
     /* https://easings.net/ */
 
-    --transition-duration: ;
-    --transition-easing: ;
+    --transition-duration: 500ms;
+    --transition-easing: ease;
 
     --alpha-light: 0.5;
     --color-light-hsl: 72, 12%, 92%;

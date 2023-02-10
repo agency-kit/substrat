@@ -2,7 +2,6 @@
 const props = defineProps(['numerator','denominator', 'ratio', 'filter'])
 const aspect = ref(null)
 aspect.value = props.ratio ? props.ratio : 'var(--n) / var(--d)';
-console.log(aspect.value, 'ASPECT')
 </script>
 
 <template>

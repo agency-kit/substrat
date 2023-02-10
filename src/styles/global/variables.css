@@ -19,7 +19,8 @@
 
         --alpha-secondary: 0.5;
         --color-secondary-hsl: 35, 18%, 80%;
-        
+        --transition-duration: 900ms;
+        --transition-easing: cubic-bezier(0.25, 1, 0.5, 1);
 
         --alpha-secondary-dark: 0.5;
         --color-secondary-dark-hsl: 25, 33%, 47%;

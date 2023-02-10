@@ -5,7 +5,7 @@ import 'uno.css'
 import './styles/main.css'
 import './styles/themes/stable.theme.css'
 import routes from '~pages'
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(),
   routes,
