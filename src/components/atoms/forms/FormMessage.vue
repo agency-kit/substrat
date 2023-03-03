@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <label>
+    <label class="message">
         <slot/>
         <textarea :name="name"/>
     </label>
@@ -12,6 +12,9 @@
 
 <style>
 @layer block {
+    .message {
+        width: 100%;
+    }
     label {
         display: flex;
         flex-direction: column;
