@@ -1,8 +1,8 @@
 # Welcome to Substrat
 
-A functional component based collection of vue components built on CUBE css methodology (Andy Bell) and Every Layout (Heydon).
+A functional component based collection of vue components built on CUBE css methodology (Andy Bell) and Every Layout (Heydon). Recently added in open props by Adam Argyle.
 
-## Goals and Goodies
+## Goals
 
 produce an overrideable, themable stylesheet that allows use of:
 - css custom props,
@@ -19,7 +19,7 @@ produce an overrideable, themable stylesheet that allows use of:
 - easy component aliasing (ex: grid -> productGrid)
 
 
-## Future Goodies
+## Future
 
 - Random Image pool application (sets background images around the site based on a pool)
   - randomize and set actions
