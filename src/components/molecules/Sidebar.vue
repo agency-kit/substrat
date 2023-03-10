@@ -18,19 +18,19 @@ const props = defineProps({
   full: Boolean
 })
 
-const bar = $ref(null)
-const open = $ref(true)
-const width = $ref(0)
+const bar = ref(null)
+const open = ref(true)
+const width = ref(0)
 const offset = '10'
 const toggle = () => {
-  if (open) {
-    open = !open
-    width = bar.clientWidth
-    bar.style.minWidth = `${offset}px`
+  if (open.value) {
+    open.value = !open.value
+    width.value = bar.value.clientWidth
+    bar.value.style.minWidth = `${offset}px`
   } else {
-    bar.style.minWidth = `${width}px`
-    bar.style.position = 'relative'
-    setTimeout(()=>open = !open, 300)
+    bar.value.style.minWidth = `${width.value}px`
+    bar.value.style.position = 'relative'
+    setTimeout(()=>open.value = !open.value, 300)
   }
 }
 </script>

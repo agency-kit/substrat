@@ -1,11 +1,11 @@
 <script setup>
-const navHeight = $ref(0)
-const nav = $ref(null)
+const navHeight = ref(0)
+const nav = ref(null)
 // Need this to compensate for navbar position in the scroll height so that footer shows
 onMounted(() => {
-  navHeight = nav.$el.clientHeight + 'px'
+  navHeight.value = nav.value.clientHeight + 'px'
   const updateNavHeight = debounce((event) => {
-    navHeight = nav.$el.clientHeight + 'px'
+    navHeight.value = nav.value.clientHeight + 'px'
   }, 50)
   addEventListener("resize", updateNavHeight);
 })
@@ -13,14 +13,18 @@ onMounted(() => {
 
 <template>
   <div class="feldspar">
-    <Navbar sticky ref="nav">
-      <template #title>
-        <slot name="nav-title"/>
-      </template>
-      <template #links>
-        <slot name="nav-links"/>
-      </template>
-    </Navbar>
+    <div ref="nav">
+      <slot name="navigation">
+        <Navbar sticky>
+          <template #title>
+            <slot name="nav-title"/>
+          </template>
+          <template #links>
+            <slot name="nav-links"/>
+          </template>
+        </Navbar>
+      </slot>
+    </div>
     <div class="feldspar-scroll">
       <SubSectionList>
         <slot name="sections"/>
@@ -38,6 +42,12 @@ onMounted(() => {
 .feldspar {
   max-height: 100vh;
   overflow: hidden;
+}
+
+.feldspar:deep(.nav.sticky) {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .feldspar-scroll {

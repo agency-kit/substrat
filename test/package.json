@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@iconify-json/carbon": "^1.1.11",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "substrat": "file:..",
+    "unplugin-auto-import": "^0.12.1",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^4.0.0",
+    "vite-plugin-inspect": "^0.7.11",
+    "vite-plugin-libcss": "^1.0.5",
+    "vite-plugin-pages": "^0.28.0",
+    "vite-plugin-vue-layouts": "^0.7.0",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "unocss": "^0.48.0"
+  }
+}

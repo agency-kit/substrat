@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({text: Boolean})
 </script>
 
@@ -16,9 +15,9 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  --flow-space: var(--space-s);
+  --flow-space: var(--size-2);
   margin: auto;
-  padding: var(--space-s);
+  padding: var(--size-2);
 }
 
 section.text {

@@ -1,8 +1,6 @@
 @layer base, utilities, block, composition, substrat-theme, exception;
 
 @import 'global/reset.css';
-@import 'global/fonts.css';
-@import 'global/variables.css';
 @import 'global/global.css';
 
 @import 'utilities/flow.css';

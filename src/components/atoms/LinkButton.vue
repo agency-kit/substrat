@@ -1,11 +1,11 @@
 <script setup>
-const props = defineProps({secondary: Boolean})
+const props = defineProps({primary: Boolean})
 </script>
 
 <template>
-  <Link class="link-button">
-    <SubButton :secondary="secondary">
+  <SubButton :primary="primary">
+    <Link class="link-button">
       <slot/>
-    </SubButton>
-  </Link>
+    </Link>
+  </SubButton>
 </template>

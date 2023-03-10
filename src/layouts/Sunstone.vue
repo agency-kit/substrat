@@ -55,13 +55,13 @@ onMounted(() => {
   }
 
   .sticky.nav {
+    position: sticky;
     top: 0;
     z-index: 10;
-    background-color: var(--color-light);
   }
 
   .sheet {
-    background-color: var(--color-light);
+    background-color: var(--surface-1);
   }
 
   .content {
@@ -87,6 +87,5 @@ onMounted(() => {
   .fade-leave-to {
     opacity: 0;
   }
-
 }
 </style>

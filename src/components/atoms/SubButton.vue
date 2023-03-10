@@ -1,9 +1,9 @@
 <script setup>
-const props = defineProps({secondary: Boolean})
+const props = defineProps({primary: Boolean})
 </script>
 
 <template>
-  <button class="sub-button" :class="{secondary}">
+  <button class="sub-button" :class="{primary}">
     <slot/>
   </button>
 </template>
@@ -11,13 +11,12 @@ const props = defineProps({secondary: Boolean})
 <style scoped>
 @layer block {
   .sub-button {
-    background-color: var(--color-secondary);
-    color: var(--color-dark);
-    margin-bottom: var(--space-s);
+    background-color: var(--surface-2);
+    color: var(--text-1);
   }
-  html.dark .sub-button {
-    background-color: var(--color-secondary-dark);
-    color: var(--color-light);
+
+  .sub-button.primary {
+    background-color: var(--brand);
   }
 }
 </style>

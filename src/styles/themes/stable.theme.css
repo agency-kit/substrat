@@ -3,7 +3,7 @@
     /* https://easings.net/ */
 
     --transition-duration: 500ms;
-    --transition-easing: ease;
+    --transition-easing: var(--ease-squish-3);
 
     --alpha-light: 0.5;
     --color-light-hsl: 72, 12%, 92%;
@@ -28,6 +28,8 @@
     --alpha-secondary-dark: 0.5;
     --color-secondary-dark-hsl: 25, 33%, 47%;
 
-    transition: background-color 1s ease-in-out, color 0.3s ease-in-out;
+    transition: 
+      background-color var(--transition-duration) var(--transition-easing),
+      color var(--transition-duration) var(--transition-easing);
   }
 }

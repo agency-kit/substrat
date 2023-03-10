@@ -1,9 +1,9 @@
 <script setup>
-const nav = $ref(null)
-const bar = $ref(null)
-const navHeight = $ref('')
+const nav = ref(null)
+const bar = ref(null)
+const navHeight = ref('')
 onMounted(()=>{
-  navHeight = nav.$el.clientHeight + 'px'
+  navHeight.value = nav.$el.clientHeight + 'px'
 })
 </script>
 

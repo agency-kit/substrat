@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
+import 'substrat/dist/substrat.css'
+import 'substrat/dist/themes/stable.theme.css'
 import 'uno.css'
-import './styles/main.css'
-import './styles/themes/stable.theme.css'
 import routes from '~pages'
 import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({

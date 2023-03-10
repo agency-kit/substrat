@@ -1,16 +1,8 @@
-<script>
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('div', {class: 'cluster'}, [h(slots.default)])
-  }
-})
-</script>
-
-<!-- <template>
+<template>
   <div class="cluster">
     <slot/>
   </div>
-</template> -->
+</template>
 
 <style scoped>
 .cluster {

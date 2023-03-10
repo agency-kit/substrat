@@ -2,13 +2,12 @@
 const handleDark = ()=>{
   if (document) {
     const html = document.documentElement
-    if (html.classList.contains('dark')) {
+    if (html.getAttribute('color-scheme') === 'dark') {
       localStorage.setItem('dark', 'false');
-      html.classList.remove('dark')
-    } 
-    else {
+      html.setAttribute('color-scheme', 'light')
+    } else {
       localStorage.setItem('dark', 'true');
-      html.classList.add('dark')
+      html.setAttribute('color-scheme', 'dark')
     }
   }
 }

@@ -7,9 +7,7 @@
       </SubSection>
     </template>
     <template #nav>
-      <div>
-        Sunstone
-      </div>
+      <TestNav></TestNav>
     </template>
     <template #default>
       <SubSection class="bg-blue">

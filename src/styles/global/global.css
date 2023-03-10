@@ -1,23 +1,120 @@
-@layer base {
-  /* 
-    Global styles 
+@import "open-props/open-props.min.css" layer(base);
+@import "open-props/normalize.min.css" layer(base);
+@import "open-props/buttons.min.css" layer(base);
 
-    Low-specificity, global styles that apply to the whole 
-    project: https://cube.fyi/css.html
-  */
+@layer base {
+
+  /* defaults */
 
   :root {
-    @apply uno;
-  }
-    
-  html {
-    background: var(--color-light);
-    color: var(--color-dark);
+    /* Override this in theme to remove all default shadows */
+    --default-shadow: var(--shadow-4); 
   }
 
-  html.dark {
-    background: var(--color-dark);
-    color: var(--color-light);
+  html {
+    --brand-light: var(--orange-3);
+  
+    --text-1-light: var(--gray-8);
+    --text-2-light: var(--gray-7);
+  
+    --surface-1-light: var(--gray-2);
+    --surface-2-light: var(--gray-0);
+    --surface-3-light: var(--gray-1);
+    --surface-4-light: var(--gray-3);
+  }
+
+  html {
+    --brand-dim: var(--orange-4);
+  
+    --text-1-dim: var(--gray-3);
+    --text-2-dim: var(--gray-4);
+  
+    --surface-1-dim: var(--gray-8);
+    --surface-2-dim: var(--gray-7);
+    --surface-3-dim: var(--gray-6);
+    --surface-4-dim: var(--gray-5);
+  }
+
+  html {
+    --brand-dark: var(--orange-3);
+  
+    --text-1-dark: var(--gray-1);
+    --text-2-dark: var(--gray-3);
+  
+    --surface-1-dark: var(--gray-9);
+    --surface-2-dark: var(--gray-8);
+    --surface-3-dark: var(--gray-7);
+    --surface-4-dark: var(--gray-6);
+  }
+
+  html {
+    --brand-purple: var(--purple-5);
+  
+    --text-1-purple: var(--purple-9);
+    --text-2-purple: var(--purple-7);
+  
+    --surface-1-purple: var(--purple-0);
+    --surface-2-purple: var(--purple-1);
+    --surface-3-purple: var(--purple-2);
+    --surface-4-purple: var(--purple-3);
+  }
+
+  [color-scheme="dark"] {
+    --brand: var(--brand-dim);
+  
+    --text-1: var(--text-1-dim);
+    --text-2: var(--text-2-dim);
+  
+    --surface-1: var(--surface-1-dim);
+    --surface-2: var(--surface-2-dim);
+    --surface-3: var(--surface-3-dim);
+    --surface-4: var(--surface-4-dim);
+  }
+
+  [color-scheme="light"] {
+    --brand: var(--brand-light);
+  
+    --text-1: var(--text-1-light);
+    --text-2: var(--text-2-light);
+  
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --surface-4: var(--surface-4-light);
+  }
+
+  html {
+    background-color: var(--surface-1);
+    color: var(--text-1);
+    accent-color: var(--link);
+  }
+
+  .surface-1 {
+    background-color: var(--surface-1);
+    color: var(--text-2);
+  }
+  
+  .surface-2 {
+    background-color: var(--surface-2);
+    color: var(--text-2);
+  }
+  
+  .surface-3 {
+    background-color: var(--surface-3);
+    color: var(--text-1);
+  }
+  
+  .surface-4 {
+    background-color: var(--surface-4);
+    color: var(--text-1);
+  }
+
+  h1,h2,h3,h4,p,dt {
+    color: var(--text-1);
+  }
+  
+  h5,h6,small,dd {
+    color: var(--text-2);
   }
 
   body,
@@ -27,10 +124,10 @@
   }
   
   body {
-      font-size: var(--size-step-1);
-      font-family: var(--font-base);
-      line-height: 1.4;
-      letter-spacing: var(--tracking);
+      font-size: var(--font-size-fluid-1);
+      font-family: var(--font-sans);
+      line-height: var(--font-lineheight-1);
+      letter-spacing: var(--font-letterspacing-1);
   }
     
   /* Base typesetting */
@@ -38,19 +135,19 @@
   h2,
   h3 {
     line-height: 1;
-    letter-spacing: var(--tracking-s);
+    letter-spacing: var(--font-letterspacing-2);
   }
 
   h1 {
-    font-size: var(--size-step-5);
+    font-size: var(--font-size-fluid-3);
   }
 
   h2 {
-    font-size: var(--size-step-4);
+    font-size: var(--font-size-fluid-2);
   }
 
   h3 {
-    font-size: var(--size-step-3);
+    font-size: var(--font-size-fluid-1);
   }
 
   /* Set line lengths */
@@ -61,7 +158,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-headers);
+    font-family: var(--font-sans);
     font-weight: normal;
   }
 
@@ -72,13 +169,13 @@
   /* More generic elements */
   blockquote:not([class]) {
     font-family: var(--font-serif);
-    font-size: var(--size-step-2);
+    font-size: var(--font-size-fluid-2);
   }
 
   /* Markdown blockquuote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
   blockquote:not([class]) p:last-of-type {
-    font-family: var(--font-base);
-    font-size: var(--size-step-1);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-fluid-1);
     font-weight: normal;
   }
 
@@ -126,16 +223,5 @@
 
   button {
     cursor: pointer;
-  }
-
-  /* Base selection styles that invert whatever colours are rendered */
-  ::selection {
-    background: var(--color-dark);
-    color: var(--color-light);
-  }
-
-  .dark ::selection {
-    background: var(--color-light);
-    color: var(--color-dark);
   }
 }

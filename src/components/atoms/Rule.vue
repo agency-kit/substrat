@@ -24,19 +24,11 @@ const double = props.double ? '3px double var(--color-primary)' : '1px solid var
   }
 
   .sub-block hr.sub-hr::after {
-    background-color: var(--color-secondary);
-  }
-
-  html.dark hr.sub-hr::after {
-    background-color: var(--color-dark);
-  }
-
-  html.dark .sub-block hr.sub-hr::after {
-    background-color: var(--color-secondary-dark);
+    background-color: var(--surface-1);
   }
 
   hr.sub-hr:after {
-      background-color: var(--color-light);
+      background-color: var(--surface-1);
       content: v-bind("content");
       padding: 0 4px;
       position: relative;
