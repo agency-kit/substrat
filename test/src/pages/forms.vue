@@ -1,6 +1,7 @@
 <template>
+  <h1>Forms</h1>
   <SubSection>
-    <h1>Forms</h1>
+    <h2>Custom Form</h2>
     <NetlifyForm>
       <FormInput :required="true" name="name">
         Name
@@ -12,5 +13,9 @@
         Message
       </FormMessage>
     </NetlifyForm>
+  </SubSection>
+  <SubSection>
+    <h2>Basic Pre-configured Form</h2>
+    <SimpleContactForm/>
   </SubSection>
 </template>

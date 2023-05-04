@@ -1,28 +1,30 @@
 # Welcome to Substrat
 
-Smart CSS, wrapped in modular (Vue) components, built for SSG.
+Smart CSS, wrapped in modular (Vue) components, built for SSG. 
+Powered by Open-props.
+
+🚧 Under Construction, Follows Semver, current: 0.1.1, lock version and USE WITH CAUTION 🚧
 
 ## Goals
 
-produce an overrideable, themable stylesheet that allows use of:
+Produce an overrideable, themable stylesheet that allows use of:
 - css custom props,
-- unocss utility classes, 
-- total responsiveness at the layout and component level
+- total responsiveness at the component and layout level
 - semantic HTML
-- dark mode, css themes, and dynamic (user driven) themes 
-- output webcomponent versions of each
+- dark mode, css themes, and dynamic (end-user driven) themes 
 - atomic and molecular designs
-- provides some basic layouts for use with `vite-plugin-vue-layouts` as a bonus
+- include some basic layouts, encourage community driven layouts (and components)
 - SSR/SSG Ready
+- noJS mode
 - tree shakeable components
-- easy component aliasing (ex: grid -> productGrid)
-- Usage as simple CSS classes also by exporting all component styles as standalone utility stylesheet
+- easy component aliasing (ex: grid -> mySpecialProductGrid)
+- export all component styles as standalone utility stylesheet
 
 ## Future
 
-- Random Image pool application (sets background images around the site based on a pool)
-  - randomize and set actions
+- use Mitosis to output omni-framework compatibile components.
 
 ## Todos
 
--[] Add stories using https://github.com/ComponentDriven/csf
+- [ ] Add stories using https://github.com/ComponentDriven/csf
+- [ ] lazy component should be a directive (also, credit source)

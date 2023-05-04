@@ -24,12 +24,6 @@ export default defineComponent({
 })
 </script>
 
-<!-- <template>
-  <div class="reel">
-    <ReelItems/>
-  </div>
-</template> -->
-
 <style scoped>
 .reel {
   display: flex;

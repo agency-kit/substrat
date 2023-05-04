@@ -5,7 +5,7 @@
     <SubSection class="gradient">
       <h2>This is the first title</h2>
       <p>A small text</p>
-      <Rule content="👽" double></Rule>
+      <Rule content="👽" double transparent></Rule>
       <p>another small text</p>
     </SubSection>
     <SubSection>
@@ -13,8 +13,9 @@
         <Block intrinsic>
           <h2>This is the first title</h2>
           <p>A small text</p>
-          <Rule content="👽" double></Rule>
+          <Rule content="👽" double transparent></Rule>
           <p>another small text</p>
+          <Rule content="☄️" double transparent></Rule>
         </Block>
       </div>  
     </SubSection>

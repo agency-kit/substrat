@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Block: typeof import('@agency-kit/substrat')['Block']
+    Card: typeof import('@agency-kit/substrat')['Card']
     Center: typeof import('@agency-kit/substrat')['Center']
     DarkModeButton: typeof import('@agency-kit/substrat')['DarkModeButton']
     DropdownButton: typeof import('@agency-kit/substrat')['DropdownButton']
@@ -21,14 +22,15 @@ declare module '@vue/runtime-core' {
     LinkButton: typeof import('@agency-kit/substrat')['LinkButton']
     Navbar: typeof import('@agency-kit/substrat')['Navbar']
     NetlifyForm: typeof import('@agency-kit/substrat')['NetlifyForm']
-    Pyroxene: typeof import('substrat')['Pyroxene']
+    Pyroxene: typeof import('@agency-kit/substrat')['Pyroxene']
     ReelNav: typeof import('@agency-kit/substrat')['ReelNav']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Rule: typeof import('@agency-kit/substrat')['Rule']
+    SimpleContactForm: typeof import('@agency-kit/substrat')['SimpleContactForm']
     SubNav: typeof import('@agency-kit/substrat')['SubNav']
     SubSection: typeof import('@agency-kit/substrat')['SubSection']
-    Sunstone: typeof import('substrat')['Sunstone']
+    Sunstone: typeof import('@agency-kit/substrat')['Sunstone']
     TestNav: typeof import('./components/TestNav.vue')['default']
   }
 }

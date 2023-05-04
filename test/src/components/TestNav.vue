@@ -10,12 +10,9 @@
         <template #dropdown>
           <Link href="/sunstone-ex">Sunstone</Link>
           <Link href="/feldspar-ex">Feldspar</Link>
-          <Link href="/chalcedony-ex">Chalcedony</Link>
-          <Link href="/pyroxene-ex">Pyroxene</Link>
         </template>
       </DropdownButton>
       <LinkButton href="/forms">Forms</LinkButton>
-      <LinkButton href="/navigation">Navigation</LinkButton>
       <DarkModeButton>
         <div class="i-carbon-sun dark:i-carbon-moon"></div>
       </DarkModeButton>

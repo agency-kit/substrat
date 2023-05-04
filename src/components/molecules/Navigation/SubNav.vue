@@ -32,7 +32,6 @@ const props = defineProps({
 .links:deep(> *) {
   margin-left: 1rem;
   display: inline-flex;
-  margin-bottom: var(--size-1);
 }
 
 nav {
