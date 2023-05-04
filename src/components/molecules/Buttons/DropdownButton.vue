@@ -28,7 +28,7 @@
   opacity: 0;
   overflow: hidden;
   background: var(--surface-1);
-  width: auto;
+  width: 100%;
   z-index: -1;
   border-radius: var(--radius-2);
   transition: top var(--ease-squish-3) 0.2s, opacity var(--ease-squish-3) 0.2s;

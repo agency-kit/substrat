@@ -27,7 +27,7 @@
 <style scoped>
 @layer composition {
   .pyroxene:deep(.bar) {
-    background-color: var(--color-secondary);
+    background-color: var(--surface-2);
     height: 100vh;
   }
 

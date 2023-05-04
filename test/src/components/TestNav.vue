@@ -1,5 +1,5 @@
 <template>
-  <Navbar sticky class="test-nav">
+  <SubNav sticky class="test-nav">
     <template #title>
       <h1 class="inline-flex items-center"><div class="i-carbon-template"></div>SUBSTRAT</h1>
     </template>
@@ -14,11 +14,13 @@
           <Link href="/pyroxene-ex">Pyroxene</Link>
         </template>
       </DropdownButton>
+      <LinkButton href="/forms">Forms</LinkButton>
+      <LinkButton href="/navigation">Navigation</LinkButton>
       <DarkModeButton>
         <div class="i-carbon-sun dark:i-carbon-moon"></div>
       </DarkModeButton>
     </template>
-  </Navbar>
+  </SubNav>
 </template>
 
 <style scoped>

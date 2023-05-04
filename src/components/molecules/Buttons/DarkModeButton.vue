@@ -22,12 +22,8 @@ const handleDark = ()=>{
 <style scoped>
 @layer block {
   .sub-button {
-    background-color: var(--color-secondary);
-    color: var(--color-dark);
-  }
-  html.dark .sub-button {
-    background-color: var(--color-secondary-dark);
-    color: var(--color-light);
+    background-color: var(--surface-2);
+    color: var(--text-1);
   }
 }
 </style>

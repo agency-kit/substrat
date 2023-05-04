@@ -15,10 +15,8 @@ aspect.value = props.ratio ? props.ratio : 'var(--n) / var(--d)';
 <style scoped>
 @layer block {
   .frame {
-    max-height: calc(100vh - var(--space-s));
-    --n: v-bind("props.numerator");
-    --d: v-bind("props.denominator");
-    aspect-ratio: v-bind("aspect");
+    max-height: calc(100vh - var(--size-2));
+    aspect-ratio: var(--ratio-landscape);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -41,7 +39,8 @@ aspect.value = props.ratio ? props.ratio : 'var(--n) / var(--d)';
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--color-primary-α);
+    background-color: var(--surface-2);
+    opacity: 0.5;
   }
 }
 </style>

@@ -54,14 +54,10 @@ onMounted(()=>{
 
 .chalcedony:deep(.bar) {
   position: relative;
-  padding: var(--space-s);
+  padding: var(--size-2);
   height: 100vh;
-  background: var(--color-secondary);
+  background: var(--surface-2);
   transition: min-width 0.5s ease-in-out;
-}
-
-.dark .chalcedony:deep(.bar), .dark .toggle-tab {
-  background: var(--color-secondary-dark);
 }
 
 .toggle-tab {
@@ -69,7 +65,7 @@ onMounted(()=>{
   right: -1rem;
   top: 2rem;
   border-radius: var(--border-radius);
-  background-color: var(--color-secondary);
+  background-color: var(--surface-2);
 }
 
 .chalcedony .scroller {

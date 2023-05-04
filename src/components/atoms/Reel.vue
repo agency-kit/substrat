@@ -66,7 +66,7 @@ export default defineComponent({
 }
 
 .reel::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--surface-2);
 }
 
 .reel:deep(.reel-item) {

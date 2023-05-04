@@ -5,24 +5,22 @@ const props = defineProps({
 </script>
 
 <template>
-    <Lazy ssrOnly>
-        <form class="" :name="formName" action="/success" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <p class="hidden-field">
-                <label>
-                Don’t fill this out if you’re human: <input name="bot-field"/>
-                </label>
-            </p>
-            <slot/>
-            <div class="button-shell">
-                <SubButton type="submit">
-                    <slot name="button">
-                        Send
-                    </slot>
-                </SubButton>
-            </div>
-            <input type="hidden" name="form-name" :value="formName"/>
-        </form>
-    </Lazy>
+  <Lazy ssrOnly>
+    <form class="" :name="formName" action="/success" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <p class="hidden-field">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field"/>
+        </label>
+      </p>
+      <slot/>
+      <div class="button-shell">
+        <SubButton type="submit">
+          <slot name="button">Send</slot>
+        </SubButton>
+      </div>
+      <input type="hidden" name="form-name" :value="formName"/>
+    </form>
+  </Lazy>
 </template>
 
 <style scoped>
@@ -33,6 +31,7 @@ const props = defineProps({
         justify-content: center;
         padding: var(--space-m);
         max-width: 50rem;
+        gap: var(--size-2);
     }
     .hidden-field {
         display: none;

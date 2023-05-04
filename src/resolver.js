@@ -5,21 +5,21 @@ const nameMatch = /(?:(?!\/)\w+(?=\.vue))+/
 const components = []
 
 for (const path in modules) {
-    const fileName = path.match(nameMatch)[0]
-    components.push(fileName)
+  const fileName = path.match(nameMatch)[0]
+  components.push(fileName)
 }
 
 for (const path in layouts) {
-    const fileName = path.match(nameMatch)[0]
-    components.push(fileName)
+  const fileName = path.match(nameMatch)[0]
+  components.push(fileName)
 }
 
 export default () => {
   return {
     type: 'component',
     resolve: (name) => {
-      if (components.includes(name)){
-        return { name, from: 'substrat' }
+      if (components.includes(name)) {
+        return { name, from: '@agency-kit/substrat' }
       }
     }
   }

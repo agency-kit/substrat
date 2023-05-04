@@ -1,12 +1,12 @@
 <script setup>
-    defineProps(['name'])
+    defineProps(['name', 'required'])
 </script>
 
 <template>
-    <label class="message">
-        <slot/>
-        <textarea :name="name"/>
-    </label>
+  <label class="message">
+    <slot/>
+    <textarea :name="name" :required="required"/>
+  </label>
 </template>
 
 

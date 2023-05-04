@@ -124,7 +124,7 @@
   }
   
   body {
-      font-size: var(--font-size-fluid-1);
+      font-size: var(--font-size-fluid-0);
       font-family: var(--font-sans);
       line-height: var(--font-lineheight-1);
       letter-spacing: var(--font-letterspacing-1);
@@ -223,5 +223,35 @@
 
   button {
     cursor: pointer;
+  }
+  
+  :where(hr) {
+    margin-block: var(--size-fluid-1);
+    width: 100%;
+  }
+
+  .hover {
+    box-shadow: var(--default-shadow);
+    transition: box-shadow var(--transition-duration) var(--transition-easing);
+  }
+
+  .hover:hover {
+    box-shadow: var(--shadow-3) !important;
+    transition: box-shadow var(--transition-duration) var(--transition-easing);
+  }
+
+  /* Form Validation */
+
+  input:optional, textarea:optional {
+    border-color: gray;
+    border-width: 1px;
+  }
+  input:required, textarea:required {
+    border-color: black;
+    border-width: 1px;
+  }
+  input:invalid, textarea:invalid {
+    border-color: var(--red-3);
+    border-width: 1px;
   }
 }

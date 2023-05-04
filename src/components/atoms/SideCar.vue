@@ -4,7 +4,7 @@ const props = defineProps({basis: {type: Number, default: 0}, minSize: {type: Nu
 
 <template>
   <div class="sidecar">
-    <div :class="{basis: props.basis}">
+    <div :class="{basis}">
       <slot name="left"/>
     </div>
     <div>
@@ -17,7 +17,7 @@ const props = defineProps({basis: {type: Number, default: 0}, minSize: {type: Nu
 .sidecar {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-s);
+  gap: var(--size-2);
   align-items: center;
 }
 
@@ -33,6 +33,6 @@ const props = defineProps({basis: {type: Number, default: 0}, minSize: {type: Nu
 .sidecar:deep(> :last-child) {
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: calc(v-bind(minSize+'vw') - var(--space-m));
+  min-inline-size: calc(v-bind(minSize+'vw') - var(--size-2));
 }
 </style>

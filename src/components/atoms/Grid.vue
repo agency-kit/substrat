@@ -1,34 +1,35 @@
-<script>
+<script setup>
 import GridItem from './GridItem.vue';
+const slots = useSlots();
 
 const GridItems = defineComponent({
-  setup(props, {slots}) {
+  render() {
     if (!slots.default) {
       return undefined;
     }
-    return () => slots.default()[0].children.map(vnode => h(GridItem, null, {default: ()=>vnode}))
-  }
-})
-
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('div', {class: 'grid'}, [h(GridItems, slots.default)])
+    return slots.default()[0].children.map(vnode => h(GridItem, null, {default: () => vnode}))
   }
 })
 </script>
+
+<template>
+  <div class="grid">
+    <GridItems/>
+  </div>
+</template>
 
 <style scoped>
 @layer block {
   .grid {
     width: 100%;
-    padding-left: var(--space-s);
-    padding-right: var(--space-s);
+    padding-left: var(--size-2);
+    padding-right: var(--size-2);
     display: grid;
     grid-template-columns: repeat(
-      var(--grid-placement, auto-fill),
-      minmax(var(--grid-min-item-size, 16rem), 1fr)
+      auto-fill,
+      minmax(var(--size-13, 16rem), 1fr)
     );
-    gap: var(--gutter, var(--space-s-l));
+    gap: var(--gutter, var(--size-2));
   }
 
   .grid[data-rows='masonry'] {
@@ -37,8 +38,7 @@ export default defineComponent({
   }
 
   .grid[data-layout='50-50'] {
-    --grid-placement: auto-fit;
-    --grid-min-item-size: clamp(4rem,50vw,10rem);
+    --grid-min-item-size: var(--size-fluid-7);
   }
 }
 </style>

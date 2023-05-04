@@ -1,6 +1,4 @@
 <script setup>
-import { defineComponent, h } from 'vue';
-
 const outerSlots = useSlots()
 
 const ListItems = defineComponent({

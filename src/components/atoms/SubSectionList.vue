@@ -1,8 +1,8 @@
-<script>
+<script setup>
 import SubSection from './SubSection.vue';
-
+const slots = useSlots()
 const SectionItems = defineComponent({
-  setup(props, {slots}) {
+  render() {
     if (!slots.default) {
       return undefined;
     }
@@ -11,7 +11,7 @@ const SectionItems = defineComponent({
       slot = slot.children[0]
     }
     let counter = 0;
-    return () => slot.children.map(vnode => {
+    return slot.children.map(vnode => {
       const render = h(SubSection, {id: `subsec-${counter}`}, {default: () => vnode})
       counter++;
       return render
@@ -19,14 +19,10 @@ const SectionItems = defineComponent({
   }
 });
 
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('div', {class: 'flow'}, [h(SectionItems, slots.default)])
-  }
-})
+
 </script>
 
-<!-- <template>
+<template>
   <div class="flow">
     <SectionItems/>
   </div>
@@ -34,4 +30,4 @@ export default defineComponent({
 
 <style scoped>
 
-</style> -->
+</style>

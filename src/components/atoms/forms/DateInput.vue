@@ -4,8 +4,8 @@
 
 <template>
     <label>
-        <slot/>
-        <input type="datetime-local" :name="name">
+      <slot/>
+      <input type="datetime-local" :name="name">
     </label>
 </template>
 

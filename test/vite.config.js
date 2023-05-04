@@ -5,7 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
 import viteInspect from 'vite-plugin-inspect'
-import { SubstratResolver } from 'substrat'
+import { SubstratResolver } from '@agency-kit/substrat'
 import { presetUno, presetIcons } from 'unocss'
 
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
         presetIcons({
           scale: 1.2,
           warn: true,
-        }),]
+        })]
     }),
     AutoImport({
       include: [

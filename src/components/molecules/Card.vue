@@ -11,9 +11,9 @@
 <style scoped>
 @layer block {
   .card {
-    background: var(--color-light);
-    color: var(--color-dark);
-    border-radius: var(--border-radius);
+    background: var(--surface-2);
+    color: var(--text-1);
+    border-radius: var(--radius-3);
     max-width: unset;
     display: flex;
     justify-content: flex-start;
@@ -24,13 +24,8 @@
   }
 
 .card ::selection {
-    color: var(--color-dark);
-    background: var(--color-secondary);
+    color: var(--text-1);
+    background: var(--surface-2);
   }
-
-.dark .card {
-  background: var(--color-dark);
-  color: var(--color-light);
-}
 }
 </style>

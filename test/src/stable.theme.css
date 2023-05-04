@@ -2,14 +2,13 @@
   :root {
     /* https://easings.net/ */
 
-    --transition-duration: 500ms;
-    --transition-easing: var(--ease-squish-3);
-
-    :root {
-      --default-shadow: var(--shadow-4); 
+    --transition-duration: 600ms;
+    --transition-easing: var(--ease-elastic-1);
     }
-  
+
     html {
+      --default-shadow: var(--shadow-5); 
+
       /* Light Theme */
       --brand-light: var(--jungle-3);
     
@@ -28,7 +27,7 @@
       --text-2-dim: var(--gray-4);
     
       --surface-1-dim: var(--gray-8);
-      --surface-2-dim: var(--gray-7);
+      --surface-2-dim: #433252;
       --surface-3-dim: var(--gray-6);
       --surface-4-dim: var(--gray-5);
 
@@ -78,5 +77,4 @@
       --surface-3: var(--surface-3-light);
       --surface-4: var(--surface-4-light);
     }
-  }
 }

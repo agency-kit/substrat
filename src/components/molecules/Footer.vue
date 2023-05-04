@@ -25,18 +25,14 @@
 <style scoped>
 .footer-cluster {
   padding: var(--space-s);
-  background-color: var(--color-secondary);
+  background-color: var(--surface-2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.dark .footer-cluster {
-  background-color: var(--color-secondary-dark);
-}
-
 .placeholder {
   height: 1px;
-  min-width: var(--space-l);
+  min-width: var(--size-4);
 }
 </style>

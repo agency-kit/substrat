@@ -1,12 +1,12 @@
 <script setup>
-    defineProps(['name'])
+  defineProps(['name', 'required'])
 </script>
 
 <template>
-    <label>
-        <slot/>
-        <input type="text" :name="name"/>
-    </label>
+  <label>
+    <slot/>
+    <input type="text" :name="name" :required="required"/>
+  </label>
 </template>
 
 

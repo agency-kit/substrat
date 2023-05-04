@@ -2,7 +2,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const center: typeof import('./components/atoms/Center.vue')['default']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
@@ -13,9 +12,7 @@ declare global {
   const effectScope: typeof import('vue')['effectScope']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
-  const grid: typeof import('./components/atoms/Grid.vue')['default']
   const gridEntity: typeof import('./components/atoms/GridEntity.vue')['default']
-  const gridItem: typeof import('./components/atoms/GridItem.vue')['default']
   const h: typeof import('vue')['h']
   const inject: typeof import('vue')['inject']
   const isProxy: typeof import('vue')['isProxy']
@@ -49,7 +46,6 @@ declare global {
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
   const sidebar: typeof import('./components/molecules/Sidebar.vue')['default']
-  const subSectionList: typeof import('./components/atoms/SubSectionList.vue')['default']
   const throttle: typeof import('lodash')['throttle']
   const toRaw: typeof import('vue')['toRaw']
   const toRef: typeof import('vue')['toRef']

@@ -1,5 +1,5 @@
 {
-  "name": "substrat",
+  "name": "@agency-kit/substrat",
   "private": true,
   "version": "0.1.0",
   "license": "MIT",
@@ -12,21 +12,22 @@
     "test"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently 'npm run watch' 'cd test && npm run dev'",
     "build": "node ./build/components.js && vite build",
     "preview": "vite preview",
     "watch": "chokidar \"src/**/*.vue\" -d 2000 -c \"npm run build\""
   },
   "dependencies": {
-    "chokidar": "^3.5.3",
-    "chokidar-cli": "^3.0.0",
+    "@changesets/cli": "^2.26.1",
     "lodash": "^4.17.21",
-    "open-props": "^1.5.5",
-    "vue": "^3.2.45"
+    "open-props": "^1.5.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.6.0",
     "cssnano": "^5.1.14",
     "glob": "^8.0.3",
     "postcss": "^8.4.20",
@@ -37,11 +38,11 @@
     "slugify": "^1.6.5",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
-    "unocss": "^0.48.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
     "vite-plugin-inspect": "^0.7.11",
+    "vue": "^3.2.45",
     "zx": "^7.1.1"
   }
 }

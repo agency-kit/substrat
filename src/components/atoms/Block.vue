@@ -21,7 +21,7 @@ const props = defineProps({intrinsic: Boolean, image: String})
     margin: var(--size-2);
     padding: var(--size-4);
     width: calc(100% - 2 * var(--size-2));
-    border-radius: var(--radius-4);
+    border-radius: var(--radius-3);
     box-shadow: var(--default-shadow);
   }
 

@@ -18,6 +18,34 @@
         </Block>
       </div>  
     </SubSection>
+    <SubSection>
+      <Center>
+        <Grid>
+          <template>
+            <Block class="hover">
+              <h3>Fast DX</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod quibusdam voluptate laboriosam, porro voluptatum molestias nihil optio fugit reiciendis quasi id corporis maxime aspernatur, voluptas eligendi eveniet dolorem quisquam.</p>
+            </Block>
+            <Block class="hover">
+              <h3>SSG ready</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod quibusdam voluptate laboriosam, porro voluptatum molestias nihil optio fugit reiciendis quasi id corporis maxime aspernatur, voluptas eligendi eveniet dolorem quisquam.</p>
+            </Block>
+            <Block class="hover">
+              <h3>Foundation for apps</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod quibusdam voluptate laboriosam, porro voluptatum molestias nihil optio fugit reiciendis quasi id corporis maxime aspernatur, voluptas eligendi eveniet dolorem quisquam.</p>
+            </Block>
+            <Block class="hover">
+              <h3>Notion Api</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quod quibusdam voluptate laboriosam, porro voluptatum molestias nihil optio fugit reiciendis quasi id corporis maxime aspernatur, voluptas eligendi eveniet dolorem quisquam.</p>
+            </Block>
+          </template>
+        </Grid>
+      </Center>
+    </SubSection>
     <Footer>
     <template #left>
       <span>use substrat</span>
@@ -34,8 +62,8 @@
 
 <style scoped>
 .app:deep(.sub-section:nth-child(3)) {
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-dark);
+  background-color: var(--surface-2);
+  color: var(--text-1);
 }
 
 .bar-example {
@@ -43,8 +71,8 @@
 }
 
 .app:deep(.sidebar .bar) {
-  background-color: var(--color-secondary);
-  padding: var(--space-s);
+  background-color: var(--surface-2);
+  padding: var(--size-2);
 }
 
 .gradient {

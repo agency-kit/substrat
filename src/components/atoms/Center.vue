@@ -1,16 +1,8 @@
-<script>
-export default defineComponent({
-  setup(props, {slots}) {
-    return () => h('div', {class: 'center'}, [h(slots.default)])
-  }
-})
-</script>
-
-<!-- <template>
+<template>
   <div class="center">
     <slot/>
   </div>
-</template> -->
+</template>
 
 <style scoped>
 @layer block {
@@ -20,8 +12,8 @@ export default defineComponent({
     box-sizing: content-box;
     margin-left: auto;
     margin-right: auto;
-    padding: var(--space-s);
-    max-width: var(--measure);
+    padding: var(--size-2);
+    max-width: var(--size-content-3);
   }
 }
 </style>
